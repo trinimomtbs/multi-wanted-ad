@@ -1,0 +1,130 @@
+<style>
+.altrel-wrap{
+  max-width: 550px;
+  margin: 20px auto;
+  background:#fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,.06);
+  border: 1px solid #eee;
+  overflow: hidden;
+  font-family: Nimbus-Sans-Extended, Helvetica, sans-serif;
+  color:#242424;
+}
+
+.altrel-topbar{
+  background:#fff;
+  padding:20px 16px;
+  border-bottom:1px solid #ddd;
+  text-align: center;
+}
+.altrel-topbar h2{
+  margin:0;
+  font-family: Nimbus-Sans-Extended, Helvetica, sans-serif;
+  font-size:14px;
+  font-weight:400;
+  letter-spacing:2.5px;
+  text-transform: uppercase;
+  color:#2a2a2a;
+}
+
+/* Intro tekstfelt */
+.altrel-intro{
+  font-size: 13px;
+  color: #555;
+  font-family: Nimbus-Sans-Extended, Helvetica, sans-serif;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 14px auto 0 auto;
+  padding: 0 25px 20px 25px;
+  text-align: justify;
+}
+
+.altrel-card{
+  --avatar: 100px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.altrel-entry{
+  display:grid;
+  grid-template-columns: var(--avatar) 1fr;
+  gap: 28px;
+  align-items:center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.altrel-avatar{
+  width:var(--avatar); height:var(--avatar);
+  border-radius:50%;
+  padding:8px;
+  border:1px solid #d9d9d9;
+  background:#fff;
+  box-sizing:border-box;
+  display:grid; place-items:center;
+}
+.altrel-avatar img{
+  width:100%; height:100%;
+  object-fit:cover; display:block;
+  border-radius:50%;
+}
+
+.altrel-head{
+  margin: 0 0 6px 0;
+  font-family: Nimbus-Sans-Extended, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:#161616;
+}
+.altrel-meta{
+  margin:0 0 14px 0;
+  font-family: Nimbus-Sans-Extended, Helvetica, sans-serif;
+  font-size: 9.5px; 
+letter-spacing: 1px;
+color:#777;
+text-transform: uppercase;
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.altrel-meta span::after {
+  content:" >";
+  color:#b3b3b3;
+  margin-left: 4px;  /* afstand mellem teksten og > */
+}
+.altrel-meta span:last-child::after{ content:""; }
+
+/* Scrollfelt til alle tekstfelter */
+.altrel-text{
+  margin:0;
+  font-size:12px;
+  line-height: 1.6;
+  color:#444;
+  max-height: 60px;       /* justér højden */
+  overflow-y: auto;
+  padding-right: 15px;     /* luft ved scrollbar */
+  box-sizing: border-box;
+text-align: justify;
+}
+.altrel-text::-webkit-scrollbar{
+  width: 6px;
+}
+.altrel-text::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 4px;
+}
+.altrel-text::-webkit-scrollbar-track{
+  background: #f5f5f5;
+}
+
+@media (max-width: 680px){
+  .altrel-entry{
+    grid-template-columns:1fr;
+  }
+  .altrel-avatar{ margin:0 auto 8px; }
+}
+</style>
